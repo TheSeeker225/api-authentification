@@ -32,7 +32,7 @@ class ApiAuthentificationController extends AbstractController
         if (is_string($username) && is_string($password)) {
 
             // Ajout du nouvel utilisateur à la liste
-            $utilisateurs[][] = [ 'username' => $username, 'password' => $password];
+            $utilisateurs[][] = ['id'=> random_int(1, 100), 'username' => $username, 'password' => $password];
 
             // Envoi de la liste des utilisateurs
             return new JsonResponse($utilisateurs);
@@ -58,11 +58,11 @@ class ApiAuthentificationController extends AbstractController
                 $utilisateurs = [
                     [
                         'username' => 'Wilfried',
-                        'email' => 'wilfriedyoro68@gmail.com',
+                        'password' => 'TheSeeker225',
                     ],
                     [
                         'username' => 'Carl',
-                        'email' => 'carl@network.ci',
+                        'password' => 'Cool#225',
                     ]
                 ];
 
